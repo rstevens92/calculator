@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    color: red;
+    align-content: center;
+    justify-content: center;
+}
+
+.fa-calculator{
+    font-size: 30px;
+    padding: 10px;
+
+}
+
+section{
+    display: flex;
+    height: 500px;
+    width: 400px;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+button{
+    align-items: center;
+    font-size: 25px;
+    height: 100px;
+    width: 100px;
+}
+
+.output{
+    display: flex;
+    width: 400px;
+    height: 70px;
+    background-color: black;
+    color: white;
+    font-size: 50px;   
+    justify-content: end;
+}
+
+.key__operator{
+    font-size: 40px;
+}
+
+.key__clear{
+    grid-template-columns: 200px;
+    width: 200px;
+}
+
+.key__equals{
+    grid-template-columns: 200px;
+    width: 400px;
+    height: 70px;
+}
