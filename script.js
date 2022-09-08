@@ -1,28 +1,3 @@
-// const handleMathButton = (event, buttonValue) => {
-
-//    const outputSpace = document.getElementById("output");
-   
-//    outputSpace.innerHTML += buttonValue;
-    
-//     if (buttonValue.match(/[0-9]/)){
-//         const numberValue = Number(buttonValue);
-//     } 
-
-//     let equasion = outputSpace.split();
-
-//     const plusButton = document.getElementById("plus-button");
-
-
-//     const equalsButton = document.getElementById("equals-button");
-
-//     equalsButton = function() {
-//         for (index = 0; index = outputSpace.length; index++) {
-//             let answer = index + equasion;
-//             return outputSpace.innerHTML += answer;
-//         }
-//     }
-// }
-
 const numberBtns = document.querySelectorAll('.key__number');
 const operatorBtns = document.querySelectorAll('.key__operator');
 const equalsBtn = document.querySelector(".key__equals");
@@ -42,20 +17,17 @@ numberBtns.forEach(number => {
         initialNumber = event.target.innerText;
         initialNumberArr.push(initialNumber);
         outputSpace.innerHTML += initialNumber;
-        // if (outputSpace.innerText.match(/=/g) ){
-        //     outputSpace.innerText = '';
-        //     console.log(event.target.innerText);
-        //     initialNumber = event.target.innerText;
-        //     outputSpace.innerHTML += initialNumber;
-        // }
-    })
+            })
 })
 
 
 const resetOutput = () => {
     outputSpace.innerText = '';
-    // Recommend resetting all of your global variables here also just to make the reset function more secure
-    // As these variables could still be affecting the calculator functionality
+     initialNumber = '';
+     operatorVal = '';
+     secondNumber = '';
+     initialNumberArr = [];
+     secondNumberArr = [];
 }
 
 operatorBtns.forEach(operator =>{
@@ -72,7 +44,6 @@ operatorBtns.forEach(operator =>{
 
 clearBtn.addEventListener('click', resetOutput);
 
-// after equals button has been pressed, it should show the equasion until another number gets pressed
 equalsBtn.addEventListener('click', (event) => {
     outputSpace.innerText += equalsBtn.innerHTML;
     initialNumber = initialNumberArr.join('');
@@ -98,4 +69,10 @@ equalsBtn.addEventListener('click', (event) => {
             }
         }
         calculateSum(initialNumber, operatorVal, secondNumber);
+
+         initialNumber = '';
+         operatorVal = '';
+         secondNumber = '';
+         initialNumberArr = [];
+         secondNumberArr = [];
     })

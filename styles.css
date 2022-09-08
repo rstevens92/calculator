@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap');
+
 *{
     margin: 0;
+    background-color: rgb(247, 247, 174);
+    font-family: Roboto Mono;
 }
 
 header{
     display: flex;
-    color: red;
+    color: rgb(0, 0, 63);
     align-content: center;
     justify-content: center;
 }
@@ -13,6 +17,12 @@ header{
     font-size: 30px;
     padding: 10px;
 
+}
+
+.calculator-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section{
@@ -25,6 +35,7 @@ section{
 
 button{
     align-items: center;
+    background-color: beige;
     font-size: 25px;
     height: 100px;
     width: 100px;
@@ -34,7 +45,7 @@ button{
     display: flex;
     width: 400px;
     height: 70px;
-    background-color: black;
+    background-color: rgb(0, 0, 63);
     color: white;
     font-size: 50px;   
     justify-content: end;
